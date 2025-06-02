@@ -8,6 +8,7 @@ export default function AddTask() {
   async function handleSumbit(event, formData) {
     event.preventDefault();
     try {
+      console.log(formData);
       const response = await fetch(
         "https://recruter-backend.vercel.app/api/tasks",
         {
