@@ -30,16 +30,14 @@ export default function Modal({ isOpen, setIsOpen, task, modalAction }) {
   async function handleSumbit(event) {
     setFormError(null);
 
-    // Validate form data
     if (!formData.title.trim()) {
       setFormError("Task title is required");
-      toast.error("Task title is required");
       return;
     }
 
     if (role === "admin" && !formData.assignedTo) {
       setFormError("Please assign this task to a user");
-      toast.error("Please assign this task to a user");
+
       return;
     }
 

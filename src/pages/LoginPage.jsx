@@ -35,7 +35,6 @@ export default function LoginPage() {
         const errorMessage =
           data.error || "Login failed. Please check your credentials.";
         setError(errorMessage);
-        toast.error(errorMessage);
         return;
       }
 

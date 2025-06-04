@@ -23,7 +23,6 @@ export default function useSubmit() {
         const errorMessage =
           result.error || "An error occurred. Please try again.";
 
-        toast.error(errorMessage);
         return { success: false, error: errorMessage };
       }
 
@@ -37,7 +36,7 @@ export default function useSubmit() {
       console.error("Error submitting task:", error);
 
       const errorMessage = "Network error. Please try again later.";
-      toast.error(errorMessage);
+
       return { success: false, error: errorMessage };
     }
   }
