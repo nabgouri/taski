@@ -1,1 +1,6 @@
 @import "tailwindcss";
+.task:hover {
+  & .task-action {
+    display: flex;
+  }
+}

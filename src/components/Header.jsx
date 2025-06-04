@@ -18,7 +18,7 @@ export default function Header() {
       <Logo />
       <div className="flex gap-5 items-center ">
         <span className="text-lg font-semi-bold">{firstName}</span>
-        <button onClick={() => logOut()}>
+        <button className="cursor-pointer" onClick={() => logOut()}>
           <img src={avatarImage} alt="avatar Image" />
         </button>
       </div>

@@ -9,22 +9,26 @@ const ENDPOINT = "https://recruter-backend.vercel.app/api/tasks";
 
 export default function TasksPage() {
   const { data: tasks } = useFetcher(ENDPOINT);
-  const { firstName } = useAuthUser();
+  const { firstName, role } = useAuthUser();
   return (
     <PageWrapper className="px-[100px] pt-[50px]">
       <Header />
       <div className="my-[50px]">
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-3xl font-bold mb-2.5">
           Welcom, <span className="text-[#007fff]">{firstName}</span>.
         </h1>
-        <p>you</p>
+        <p className="text-lg font-medium text-[#8D9CB8]">
+          {role === "admin"
+            ? `Your Team got ${tasks?.length ?? "0"} tasks to do.`
+            : `You've got ${tasks?.length ?? "0"} tasks to do.`}
+        </p>
       </div>
-      <ul>
+      <ul className="space-y-4">
         {tasks?.map((task) => (
           <Task key={task.id} task={task} />
         ))}
       </ul>
-      <AddTask />
+      {role === "admin" && <AddTask />}
     </PageWrapper>
   );
 }

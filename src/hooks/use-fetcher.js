@@ -14,10 +14,11 @@ export default function useFetcher(endpoint) {
 
     return json;
   }
-  const { data, isLoading, error } = useSWR(endpoint, fetcher);
+  const { data, mutate, isLoading, error } = useSWR(endpoint, fetcher);
   return {
     data,
     isLoading,
     error,
+    mutate,
   };
 }
