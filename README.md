@@ -1,13 +1,41 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 # taski
+A web application with role-based authentication and user management.
+
+## Quick Start
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open your browser and navigate to the application URL (typically `http://localhost:5713`).
+
+## Demo Accounts
+
+The application comes with pre-seeded demo accounts for testing different user roles:
+
+### Admin Account
+- **Username:** ayman
+- **Password:** password
+
+### Regular Users
+- **Username:** fadma
+- **Password:** password
+
+- **Username:** rachid
+- **Password:** password
+
+## Creating New Accounts
+
+You can also create new user accounts by making a POST request to `/api/register` or through the application's registration interface (if available).
+
+**Note:** If the demo accounts don't work, you may need to create new accounts as the backend sometimes erases previous user data. In this case, simply register new accounts with the same usernames and passwords listed above, or create your own test accounts.
+
+## Notes
+
+- If the demo accounts don't work, you may need to create new accounts as the backend sometimes erases previous user data
