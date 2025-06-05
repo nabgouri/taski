@@ -1,5 +1,4 @@
 import useAuthHeader from "react-auth-kit/hooks/useAuthHeader";
-import { toast } from "react-toastify";
 
 export default function useSubmit() {
   const authHeader = useAuthHeader();
@@ -30,7 +29,6 @@ export default function useSubmit() {
         onSuccess(result);
       }
 
-      toast.success("Operation completed successfully!");
       return { success: true };
     } catch (error) {
       console.error("Error submitting task:", error);
